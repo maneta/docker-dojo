@@ -1,4 +1,8 @@
-#docker-dojo
+docker-dojo
+===========
+
+* Application Endpoint (Google Cloud): http://104.155.27.74:4567/
+
 Generate Docker Image
 ======================
 
