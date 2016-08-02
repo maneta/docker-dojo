@@ -1,7 +1,7 @@
-# docker-dojo
+#docker-dojo
 
-### Deploying Redis Cluster
-
+Deploying Redis Cluster
+========================
 
 Creating Master Controller
 --------------------------
