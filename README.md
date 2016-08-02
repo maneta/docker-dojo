@@ -1,4 +1,20 @@
 #docker-dojo
+Generate Docker Image
+======================
+
+* Building the image 
+
+```bash
+cd app
+docker build -t maneta/sinatra .
+```
+* Commiting the image to Docker Hub
+
+```bash
+docker push maneta/sinatra
+```
+
+* Repository: https://hub.docker.com/r/maneta/sinatra/
 
 Deploying Redis Cluster
 ========================
