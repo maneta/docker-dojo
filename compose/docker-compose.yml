@@ -1,0 +1,10 @@
+version: '2'
+services:
+  sinatra:
+    image: maneta/sinatra
+    ports:
+     - "4567:4567"
+    depends_on:
+     - redis
+  redis:
+    image: redis
