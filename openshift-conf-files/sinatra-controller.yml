@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: sinatra
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sinatra
+        tier: frontend
+    spec:
+      containers:
+      - name: sinatra
+        image: maneta/sinatra
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        - name: REDIS_PORT
+          value: "6379"
+        ports:
+        - containerPort: 4567

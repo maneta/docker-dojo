@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sinatra
+  labels:
+    app: sinatra
+    tier: frontend
+spec:
+  # if your cluster supports it, uncomment the following to automatically create
+  # an external load-balanced IP for the frontend service.
+  type: LoadBalancer
+  ports:
+    # the port that this service should serve on
+  - port: 4567
+    targetPort: 4567
+    protocol: TCP
+  selector:
+    app: sinatra
+    tier: frontend
