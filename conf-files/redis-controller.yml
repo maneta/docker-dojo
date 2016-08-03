@@ -22,3 +22,11 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 6379
+        volumeMounts:
+        - name: redis-persistent-storage
+          mountPath: /data
+      volumes:
+      - name: redis-persistent-storage
+        gcePersistentDisk:
+          pdName: redis-disk
+          fsType: ext4

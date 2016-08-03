@@ -28,6 +28,21 @@ K8´s Deploy
 Deploying Redis
 ===============
 
+Creating Disk
+--------------
+
+```bash
+gcloud compute disks create --size 200GB redis-disk
+```
+
+* Output: 
+
+```bash
+Created [https://www.googleapis.com/compute/v1/projects/ruby-app-1470156911832/zones/europe-west1-b/disks/redis-disk].
+NAME        ZONE            SIZE_GB  TYPE         STATUS
+redis-disk  europe-west1-b  200      pd-standard  READY
+```
+
 Creating Redis Controller
 --------------------------
 
