@@ -2,6 +2,7 @@ docker-dojo
 ===========
 
 * Application Endpoint (Google Cloud): http://104.155.27.74:4567/
+* Application Endpoint (Openshift): http://sinatra-ruby-app.44fs.preview.openshiftapps.com/
 
 Generate Docker Image
 ======================
@@ -20,13 +21,10 @@ docker push maneta/sinatra
 
 * Repository: https://hub.docker.com/r/maneta/sinatra/
 
-K8´s Deploy
-===========
+K8´s Deploy (Google Cloud)
+==========================
 
-* All the configurations files are located on the conf-files directory
-
-Deploying Redis
-===============
+* All the configurations files are located on the k8s-conf-files directory
 
 Creating Disk
 --------------
@@ -139,3 +137,31 @@ kubectl describe services frontend | grep "LoadBalancer Ingress"
 ```bash
 LoadBalancer Ingress:	104.155.27.74
 ```
+
+Openshift Deployment
+====================
+
+* All the configurations files are located on the k8s-conf-files directory
+
+Creating Persistent Volume Claim
+---------------------------------
+
+```bash
+oc create -f pvc.yml
+```
+
+
+Creating Redis Controller
+--------------------------
+
+```bash
+oc create -f redis-controller.yml
+```
+
+Creating Redis Service
+------------------------
+
+```bash
+kubectl create -f redis-service.yml
+```
+

@@ -27,6 +27,5 @@ spec:
           mountPath: /data
       volumes:
       - name: redis-persistent-storage
-        gcePersistentDisk:
-          pdName: redis-disk
-          fsType: ext4
+        persistentVolumeClaim:
+          claimName: redis-disk
