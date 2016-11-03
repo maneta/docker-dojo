@@ -22,7 +22,12 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 6379
-        volumeMounts:
+      livenessProbe:
+        tcpSocket:
+          port: 6379
+        initialDelaySeconds: 30
+        timeoutSeconds: 1
+      volumeMounts:
         - name: redis-persistent-storage
           mountPath: /data
       volumes:
