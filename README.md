@@ -1,9 +1,6 @@
 docker-dojo
 ===========
 
-* Application Endpoint (Google Cloud): http://104.155.27.74:4567/
-* Application Endpoint (Openshift): http://sinatra-ruby-app.44fs.preview.openshiftapps.com/
-
 Generate Docker Image
 ======================
 
@@ -13,13 +10,59 @@ Generate Docker Image
 cd app
 docker build -t maneta/sinatra .
 ```
-* Commiting the image to Docker Hub
+
+* Run the Container Image 
+
+```
+docker run --rm -t -p 4567:4567  maneta/sinatra
+```
+
+* Pushing the Docker image to Docker Hub
 
 ```bash
 docker push maneta/sinatra
 ```
 
 * Repository: https://hub.docker.com/r/maneta/sinatra/
+
+Useful commands:
+
+All running dockers:
+
+```
+docker ps
+```
+
+All running and stopped dockers:
+
+```
+docker ps -a
+```
+
+Kill a container:
+
+```
+docker kill ${containerID}
+```
+
+Remove a container:
+
+```
+docker rm ${containerID}
+```
+
+List Docker Images:
+
+```
+docker images
+```
+
+Remove Docker image:
+
+```
+docker rmi ${imageID}
+```
+
 
 K8´s Deploy (Google Cloud)
 ==========================
