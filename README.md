@@ -63,6 +63,22 @@ Remove Docker image:
 docker rmi ${imageID}
 ```
 
+Docker Compose
+===============
+
+* Start the docker compose:
+
+```bash
+cd compose
+docker-compose up
+```
+
+* Shut Down the Compose
+
+```bash
+cd compose
+docker-compose down
+```
 
 K8´s Deploy (Google Cloud)
 ==========================
