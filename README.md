@@ -7,7 +7,7 @@ docker-dojo
 4. Run the rebuild Docker.
 3. Push the rebuilt Docker image to the tag `:no-redis`
 4. Run the ruilt Docker Image Localy, now you can see the app hello world.
-5. Uncomment the line number 10, push the image to the tag `redis.
+5. Uncomment the line number 10, push the image to the tag `redis`.
 5. Try to make yourself the docker-compose for the sinatra app with the redis image.
 
 Generate Docker Image
