@@ -3,18 +3,16 @@ services:
   wordpress:
     image: wordpress
     restart: always
-    mem_limit: 256m
-    mem_reservation: 128m
     links:
       - mysql
     ports:
       - 80:80
     environment:
       WORDPRESS_DB_PASSWORD: example
+    depends_on:
+      - mysql
   mysql:
     image: mysql:5.7
     restart: always
-    mem_limit: 256m
-    mem_reservation: 128m
     environment:
       MYSQL_ROOT_PASSWORD: example

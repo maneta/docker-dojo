@@ -1,10 +1,10 @@
 version: '2'
 services:
   sinatra:
-    image: ${YOUR_IMAGE}
+    image: maneta/sinatra
     ports:
-     - 
-    links:
-     - 
+     - "4567:4567"
+    depends_on:
+     - redis
   redis:
     image: redis
