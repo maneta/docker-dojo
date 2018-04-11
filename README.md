@@ -13,6 +13,11 @@ docker-dojo
 Generate Docker Image
 ======================
 
+## How to Loging in DockerHub trough the CLI
+
+```text
+docker login -u {username} -p {password}
+
 * Building the image 
 
 ```bash
