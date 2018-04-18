@@ -7,5 +7,5 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi
-    volumeName: pv0001
+      storage: 1Gi
+    volumeName: redis-disk
