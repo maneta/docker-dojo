@@ -18,9 +18,9 @@ Generate Docker Image
 ```text
 docker login -u username -p password
 
-* Building the image 
 ```
 
+* Building the image 
 ```bash
 cd app
 docker build -t maneta/sinatra .
