@@ -16,9 +16,10 @@ Generate Docker Image
 ## How to Loging in DockerHub trough the CLI
 
 ```text
-docker login -u {username} -p {password}
+docker login -u username -p password
 
 * Building the image 
+```
 
 ```bash
 cd app
@@ -56,13 +57,13 @@ docker ps -a
 Kill a container:
 
 ```
-docker kill ${containerID}
+docker kill containerID
 ```
 
 Remove a container:
 
 ```
-docker rm ${containerID}
+docker rm containerID
 ```
 
 List Docker Images:
@@ -74,7 +75,7 @@ docker images
 Remove Docker image:
 
 ```
-docker rmi ${imageID}
+docker rmi imageID
 ```
 
 Docker Compose
